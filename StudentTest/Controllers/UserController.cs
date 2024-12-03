@@ -36,7 +36,7 @@ namespace StudentTest.Controllers
 
         }
 
-        // GET: User/Login
+
         [HttpGet]
         public IActionResult Login()
         {
