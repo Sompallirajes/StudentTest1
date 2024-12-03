@@ -1,0 +1,62 @@
+﻿<style>
+    body
+    {
+        background-color:aqua;
+    }
+</style>
+
+<img src="~/offline-omr-exam-1.png" />
+
+</img>
+<h2>Welcome To Login Page</h2>
+<br>
+<h4>Note:Registered Users Can Able To Perform Login</h4>
+<br>
+<a href="\User\Register">Not Register? Click Here</a>
+<br>
+<form action="/User/Login" method="post" id="loginForm">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" class="form-control" />
+    </div><br>
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
+<!-- Loading GIF -->
+<div id="loadingDiv" style="display:none;">
+    <img src="~/loading.gif" alt="Loading..." />
+    <p>Loading, please wait...</p>
+</div>
+
+<!-- JavaScript to show loading GIF on form submit -->
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function () {
+        // Show the loading GIF
+        document.getElementById('loadingDiv').style.display = 'block';
+    });
+</script>
+
+<style>
+    #loadingDiv {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999; /* Ensures it stays on top of other elements */
+        text-align: center;
+    }
+
+    #loadingDiv img {
+        width: 100px; /* Adjust size of the loading GIF */
+    }
+
+    /* Optional: Prevent user from interacting with the page during loading */
+    body.loading {
+        pointer-events: none;
+        opacity: 0.7; /* Dim the page while loading */
+    }
+</style>
+

@@ -1,0 +1,28 @@
+﻿@model StudentTest.Models.User
+<style>
+    body {
+        background-color:aqua
+    }
+</style>
+
+<h2 style="color:gold">Welcome,Fill The Form To Register</h2>
+<br>
+<a href="/User/Login">Already Registered? Please Login Here</a>
+<br>
+<form action="/User/Register" method="post">
+
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="UserName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="Email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="Password" class="form-control" />
+    </div><br>
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>
+
