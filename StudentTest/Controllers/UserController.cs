@@ -85,7 +85,7 @@ namespace StudentTest.Controllers
                 })
                 .OrderBy(q => Guid.NewGuid()) // Shuffle to get random questions
                 .Take(20)
-                .ToList();
+                .ToList();//to list
 
             // Log action (Start Test)
             _context.Logs.Add(new Log
@@ -132,7 +132,7 @@ namespace StudentTest.Controllers
             }
 
             // Save all logs (optional)
-            _context.SaveChanges();
+            _context.SaveChanges();//save changes
 
             // Calculate the score (e.g., out of 20)
             int score = correctAnswers;
